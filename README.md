@@ -8,7 +8,7 @@
 
 - **Frontend** : React, Vite, Tailwind, CSS3
 - **Outils** : VSCode
-- **Backend/API** : Axios, ReSend
+- **Backend/API** : Axios
 - **Déploiement** : Vercel
 
 ---
