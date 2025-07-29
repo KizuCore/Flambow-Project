@@ -1,0 +1,516 @@
+/* ========================
+   SECTION HOME 
+======================== */
+.home-section {
+  position: relative;
+  z-index: -1;
+  padding-top: 30px !important;
+  padding-bottom: 80px !important;
+  background-image: var(--section-background-color) !important;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.home-header {
+  padding-top: 80px !important;
+}
+
+.home-content {
+  padding: 8rem 0 2rem !important;
+  color: whitesmoke;
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .home-content {
+    padding: 6rem 0 2rem !important;
+  }
+}
+
+
+/* ========================
+   HEADINGS / TEXT
+======================== */
+.heading {
+  font-size: 2.4em !important;
+  padding-left: 50px !important;
+}
+
+.heading-name {
+  font-size: 2.5em !important;
+  padding-left: 45px !important;
+}
+
+.main-name {
+  color: #2bc8f0;
+}
+
+.styled-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.gradient-name {
+  font-weight: 800;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--dark-blue), #6C88FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-name::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--dark-blue), #6C88FF);
+  animation: underlineAnim 2.5s infinite ease-in-out;
+}
+
+@keyframes underlineAnim {
+  0%, 100% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(0.4);
+    transform-origin: right;
+  }
+}
+
+.typedev {
+  white-space: pre-line;
+  min-height: 150px;
+}
+
+
+/* ========================
+   TYPEWRITER EFFET
+======================== */
+.Typewriter__wrapper {
+  font-size: 2.2em !important;
+  font-weight: 200 !important;
+  font-family: 'Courier Prime', serif !important;
+  min-height: 60px !important;
+  background: linear-gradient(90deg, var(--dark-blue), #6C88FF);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Typewriter__cursor {
+  font-size: 1.8em !important;
+}
+
+@media (max-width: 767px) {
+  .Typewriter__wrapper {
+    font-size: 1.8em !important;
+    min-height: 100px !important;
+    min-width: 150px !important;
+    height: 120px !important;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .heading,
+  .heading-name {
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+
+  .typewriter-container {
+    height: 7em;
+    margin-top: 5em;
+  }
+}
+
+
+/* ========================
+   MAIN COUCOU ANIMATION
+======================== */
+.wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation-name: wave-animation;
+  animation-duration: 2.1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes wave-animation {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(14deg); }
+  20%  { transform: rotate(-8deg); }
+  30%  { transform: rotate(14deg); }
+  40%  { transform: rotate(-4deg); }
+  50%  { transform: rotate(10deg); }
+  60%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+
+/* ========================
+   AVATAR LOGO
+======================== */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 50%;
+  isolation: isolate;
+}
+
+.img-fluid {
+  position: relative;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.logo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  border: 5px dashed rgba(39, 109, 238, 0.3);
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(39, 109, 238, 0.2),
+    rgba(39, 109, 238, 0.4),
+    rgba(39, 109, 238, 0.2)
+  );
+  animation: rotateCircle 8s linear infinite, glowPulse 4s ease-in-out infinite;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.logo-wrapper.dragging::before {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  animation: none;
+}
+
+
+@keyframes rotateCircle {
+  0%   { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(39, 109, 238, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(39, 109, 238, 0.8));
+  }
+}
+
+
+/* ========================
+   SECTION HOME STATS
+======================== */
+.home-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  margin-top: 2.5rem;
+}
+
+.stat-item {
+  text-align: center;
+  color: white;
+  font-family: 'Courier Prime', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100px;
+}
+
+.stat-number,
+.stat-plus {
+  font-size: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.bold-number {
+  font-weight: 800;
+  font-size: 4rem;
+  margin-left: 0.2rem;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-top: 0.4rem;
+}
+
+.stat-item-combo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stat-item-combo .stat-label {
+  font-size: 0.85rem;
+  margin-top: 0;
+  opacity: 0.8;
+}
+
+.stat-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.2;
+}
+
+
+/* ========================
+   HERO BOUTONS
+======================== */
+.hero-buttons-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.cv-button-wrapper,
+.icon-buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-buttons-wrapper {
+  gap: 1rem;
+}
+
+@media (max-width: 767px) {
+  .hero-buttons-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .cv-button-wrapper {
+    order: 1;
+  }
+
+  .icon-buttons-wrapper {
+    order: 2;
+  }
+}
+
+
+/* ========================
+   CV BUTTON 
+======================== */
+.cv-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 34px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  border: 2px solid var(--dark-blue);
+  color: var(--dark-blue);
+  background: transparent;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s ease;
+}
+
+.cv-btn::before {
+  content: "";
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  border-radius: inherit;
+  z-index: -1;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.cv-btn:hover::before {
+  transform: translateY(0);
+}
+
+.cv-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  transform: skewX(-25deg);
+  z-index: 1;
+}
+
+.cv-btn:hover::after {
+  animation: shine 0.7s ease-in-out;
+}
+
+.cv-btn:hover {
+  background-color: var(--dark-blue);
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.cv-icon {
+  font-size: 1rem;
+  z-index: 2;
+}
+
+@keyframes shine {
+  0%   { left: -75%; }
+  100% { left: 125%; }
+}
+
+
+/* ========================
+   ICON BOUTONS (Social)
+======================== */
+.icon-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  font-size: 1.1rem;
+  border: 2px solid var(--dark-blue);
+  color: var(--dark-blue);
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.icon-btn:hover {
+  background-color: var(--dark-blue);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* ========================
+   SECTION ABOUT HOME 
+======================== */
+.home-about-section {
+  position: relative;
+  padding-top: 70px !important;
+}
+
+.home-about-description {
+  color: white !important;
+  padding-top: 100px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+
+.home-about-body {
+  padding-top: 50px;
+  font-size: 1.2em !important;
+  text-align: left;
+}
+
+
+/* ========================
+   AUTRES
+======================== */
+.social-icons-footer {
+  display: inline-block !important;
+  padding: 0 20px;
+}
+
+.padtopbot {
+  padding-bottom: 8em;
+}
+
+
+/* ========================
+   TROU NOIR
+======================== */
+.black-hole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.event-horizon {
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #000000 0%, #050505 70%, #111111 100%);
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.accretion-disk {
+  position: absolute;
+  width: 110px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 250, 200, 0.3),
+    rgba(240, 240, 240, 0.4),
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 250, 200, 0.3),
+    rgba(255, 255, 255, 0.2)
+  );
+  animation: spin 8s linear infinite;
+  z-index: -2;
+  filter: blur(2.5px);
+  opacity: 0.9;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
