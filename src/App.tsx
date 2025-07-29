@@ -1,10 +1,10 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './assets/styles/index.css';
+import './assets/styles/App.css';
+
 
 
 import ScrollToTop from "./components/Utils/ScrollToTop.tsx";
-import "./assets/styles/App.css";
 
 
 // Lazy load des composants de page

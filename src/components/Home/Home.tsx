@@ -1,15 +1,7 @@
-import { JSX } from "react";
-
-
-function Home(): JSX.Element {
-
-
-
+export default function Home() {
   return (
-    <section>
-
-    </section>
+    <div className="p-6 text-2xl text-green-600 bg-yellow-100">
+      Hello Flambow avec Tailwind 🎉
+    </div>
   );
 }
-
-export default Home;
