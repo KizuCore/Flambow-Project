@@ -9,6 +9,10 @@ export default function RegisterPage() {
     const handleWelcome = () => {
         navigate('/welcome');
     };
+
+    const handleConfirmMail = () => {
+        navigate('/confirm-mail');
+    };
     return (
         <div className="min-h-screen flex flex-col justify-between bg-white relative px-6 pt-20 pb-6">
             <img
@@ -127,11 +131,13 @@ export default function RegisterPage() {
                             </label>
                         </div>
                     </div>
+                    {/* Etape suivante */}
                     <button
-                        type="submit"
+                        type="button"
+                        onClick={handleConfirmMail}
                         className="w-full bg-[#787FDC] text-white border font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition mt-[4rem]"
                     >
-                        SE CONNECTER
+                        ÉTAPE SUIVANTE
                     </button>
 
 
