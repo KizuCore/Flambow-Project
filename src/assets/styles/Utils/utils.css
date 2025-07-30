@@ -1,13 +1,10 @@
 .input-label-flambow {
-  @apply absolute left-7 -top-[1rem] px-2 text-sm text-[#787FDC] font-sofia z-10 transition-all opacity-0 peer-focus:opacity-100 peer-placeholder-shown:opacity-0;
+  @apply absolute left-7 -top-[1rem] px-2 text-sm text-[#787FDC] font-sofia z-10 transition-all;
+
+  @apply opacity-0 peer-focus:opacity-100 peer-placeholder-shown:opacity-0;
 
   background: linear-gradient(to bottom, #ffffff 88%, #E5EBFF 12%);
 }
-
-.input-label-flambow.peer-placeholder-shown {
-  @apply top-4 text-sm bg-transparent;
-}
-
-.input-label-flambow.peer-focus {
-  background: linear-gradient(to bottom, #ffffff 50%, #E5EBFF 50%);
+input:not(:placeholder-shown) + .input-label-flambow {
+  opacity: 1;
 }
