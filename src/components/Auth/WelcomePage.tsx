@@ -30,7 +30,7 @@ export default function WelcomePage() {
                                 id="email"
                                 defaultValue="contact.flambow@gmail.com"
                                 placeholder=" "
-                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border border-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm outline-none"
+                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px]  border-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm outline-none"
                             />
                             <label htmlFor="email" className="input-label-flambow font-comfortaa">
                                 Email
@@ -46,7 +46,7 @@ export default function WelcomePage() {
                                 id="password"
                                 defaultValue="passw"
                                 placeholder=" "
-                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border border-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm font-semibold outline-none"
+                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px] border-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm font-semibold outline-none"
                             />
                             <label htmlFor="password" className="input-label-flambow font-comfortaa">
                                 Mot de passe
@@ -61,20 +61,18 @@ export default function WelcomePage() {
             </div>
 
             {/* Boutons en bas */}
-            <div className="relative z-10 w-full max-w-md mx-auto flex flex-col gap-3 pb-[5rem]">
+            <div className="relative z-10 w-full max-w-md mx-auto flex flex-col gap-4 pb-[5rem]">
                 <button
                     type="submit"
-                    className="w-full bg-[#787FDC] text-white font-bold py-3 rounded-2xl shadow-md transition hover:brightness-110"
+                    className="w-full bg-[#787FDC] text-white border font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
                 >
                     SE CONNECTER
                 </button>
 
-                <button
-                    type="button"
-                    className="w-full border border-[#787FDC] text-[#787FDC] font-bold py-3 rounded-2xl bg-white hover:bg-[#E5EBFF] transition"
-                >
-                    CRÉER UN COMPTE
+                <button type="button" className="w-full border border-[#787FDC] text-[#787FDC] font-newake text-sm tracking-widest uppercase py-3 rounded-3xl bg-white hover:bg-[#E5EBFF] transition">
+                    CREER UN COMPTE
                 </button>
+
             </div>
         </div>
     );
