@@ -125,13 +125,6 @@ export default function RegisterPage() {
 
                 </form>
             </div>
-
-            {/* Boutons en bas */}
-            <div className="relative z-10 w-full max-w-md mx-auto flex flex-col gap-4 pb-[5rem]">
-
-
-
-            </div>
         </div>
     );
 }
