@@ -10,7 +10,7 @@ export default function RegisterPage() {
             {/* Contenu scrollable */}
             <div className="relative z-10 w-full max-w-md mx-auto flex flex-col items-center text-center">
                 <h1 className="text-[40px] leading-[100%] font-bold text-[#1B1725] font-bricolage mb-[2rem]">
-                    Crérer un compte
+                    Créer un compte
                 </h1>
                 <p className="font-sofia text-[#787FDC] text-[16px] leading-[18px] text-center font-normal mb-5 pb-[3rem]">
                     Nous aurions besoin de quelques<br />
