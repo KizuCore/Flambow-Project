@@ -6,6 +6,7 @@ import './assets/styles/Utils/utils.css';
 
 import ScrollToTop from "./components/Utils/ScrollToTop.tsx";
 import WelcomePage from "./components/Auth/WelcomePage.tsx";
+import RegisterPage from "./components/Auth/RegisterPage.tsx";
 
 
 // Lazy load des composants de page
@@ -23,6 +24,7 @@ function App() {
           <Suspense>
             <Routes>
               <Route path="/" element={<LandingPage />} />
+              <Route path="/register" element={<RegisterPage />} />
               <Route path="/welcome" element={<WelcomePage />} />
             </Routes>
           </Suspense>
