@@ -7,6 +7,12 @@ import './assets/styles/Utils/utils.css';
 import ScrollToTop from "./components/Utils/ScrollToTop.tsx";
 import WelcomePage from "./components/Auth/WelcomePage.tsx";
 import RegisterPage from "./components/Auth/RegisterPage.tsx";
+import ConfirmMail from "./components/Auth/ConfirmMail.tsx";
+import PersonalizationPage from "./components/Auth/PersonalizeExperience.tsx";
+import PersonalizationDyslexie from "./components/Auth/Personalize/Personalize-Daltonisme.tsx";
+import PersonalizationDaltonisme from "./components/Auth/Personalize/Personalize-Dyslexie.tsx";
+import PersonalizationVisionReduite from "./components/Auth/Personalize/Personalize-Vision-Reduite.tsx";
+import PersonalizationGestesImprecis from "./components/Auth/Personalize/Personalize-Geste-Imprecis.tsx";
 
 
 // Lazy load des composants de page
@@ -25,6 +31,12 @@ function App() {
             <Routes>
               <Route path="/" element={<LandingPage />} />
               <Route path="/register" element={<RegisterPage />} />
+              <Route path="/confirm-mail" element={<ConfirmMail />} />
+              <Route path="/personalize-experience" element={<PersonalizationPage />} />
+              <Route path="/personalize-dyslexie" element={<PersonalizationDyslexie />} />
+              <Route path="/personalize-daltonisme" element={<PersonalizationDaltonisme />} />
+              <Route path="/personalize-gestes-imprecis" element={<PersonalizationGestesImprecis />} />
+              <Route path="/personalize-vision-reduite" element={<PersonalizationVisionReduite />} />
               <Route path="/welcome" element={<WelcomePage />} />
             </Routes>
           </Suspense>
