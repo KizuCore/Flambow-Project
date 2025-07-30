@@ -28,9 +28,9 @@ export default function WelcomePage() {
                             <input
                                 type="email"
                                 id="email"
-                                defaultValue="contact.flambow@gmail.com"
-                                placeholder=" "
-                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px]  border-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm outline-none"
+                                defaultValue=""
+                                placeholder="Email"
+                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px]  border-[#787FDC] placeholder:text-[#787FDC] bg-[#E5EBFF] text-[#787FDC] text-sm outline-none transition-opacity duration-300"
                             />
                             <label htmlFor="email" className="input-label-flambow font-comfortaa">
                                 Email
@@ -44,9 +44,9 @@ export default function WelcomePage() {
                             <input
                                 type="password"
                                 id="password"
-                                defaultValue="passw"
-                                placeholder=" "
-                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px] border-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm font-semibold outline-none"
+                                placeholder="Mot de passe"
+                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px]  border-[#787FDC] placeholder:text-[#787FDC] bg-[#E5EBFF] text-[#787FDC] text-sm outline-none transition-opacity duration-300
+"
                             />
                             <label htmlFor="password" className="input-label-flambow font-comfortaa">
                                 Mot de passe
