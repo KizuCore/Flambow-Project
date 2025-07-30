@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Regular Az.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Bold Az.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Light Az.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* NEWAKE */
+@font-face {
+  font-family: 'Newake';
+  src: url('../fonts/newake/NewakeFont-Demo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* BRICOLAGE GROTESQUE */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../fonts/bricolage/BricolageGrotesque.ttf') format('truetype');
+  font-weight: 100 900; /* pour supporter les graisses variables */
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SOFIA PRO */
+/* Sofia Pro - Regular */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Regular Az.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Bold Az.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Light */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Light Az.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Medium Az.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Semi Bold */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Semi Bold Az.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Extra Light */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro ExtraLight Az.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Ultra Light */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro UltraLight Az.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Italic (ex: Regular Italic) */
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../fonts/sofia-pro/Sofia Pro Regular Italic Az.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* COMFORTAA */
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('/fonts/Comfortaa/Comfortaa-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
+
+/* Bricolage Grotesque */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+}
