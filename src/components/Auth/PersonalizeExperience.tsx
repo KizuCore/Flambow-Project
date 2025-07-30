@@ -1,70 +1,74 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import circleTopRight from '../../assets/images/deco/circle/circle-top-right.svg';
-
 
 export default function PersonalizationPage() {
     const navigate = useNavigate();
 
-    const handleDyslexie = () => {
+    // État des pathologies sélectionnées
+    const [selections, setSelections] = useState<string[]>([]);
+
+    const toggleSelection = (value: string) => {
+        setSelections((prev) =>
+            prev.includes(value) ? prev.filter((v) => v !== value) : [...prev, value]
+        );
+    };
+
+    const isSelected = (value: string) => selections.includes(value);
+
+    const handleNext = () => {
+        console.log('Pathologies sélectionnées :', selections);
         navigate('/personalize-dyslexie');
     };
 
-    const handleDaltonisme = () => {
-        navigate('/personalize-daltonisme');
-    };
-
-    const handleGestesImprecis = () => {
-        navigate('/personalize-gestes-imprecis');
-    };
-
-    const handleVisionReduite = () => {
-        navigate('/personalize-vision-reduite');
-    };
     return (
         <div className="min-h-screen flex flex-col justify-between bg-white relative px-6 pt-20 pb-6">
-
-
             {/* Cercle haut */}
             <img src={circleTopRight} alt="" className="absolute top-0 right-0 w-32 md:w-40 lg:w-[24rem]" />
 
-            {/* Contenu scrollable */}
+            {/* Contenu */}
             <div className="relative z-10 w-full max-w-md mx-auto flex flex-col items-center text-center">
-                <h1 className="text-[40px] leading-[100%] font-bold text-[#1B1725] font-bricolage mb-[2rem]">
+                <h1 className="text-[32px] leading-[110%] font-bold text-[#1B1725] font-bricolage mb-6">
                     Personnalisons<br />votre expérience
                 </h1>
-                <p className="font-sofia text-[#787FDC] text-[16px] leading-[18px] text-center font-normal mb-5 pb-[3rem]">
+                <p className="font-sofia text-[#787FDC] text-[15px] leading-6 font-normal mb-10">
                     Renseignez d'éventuelles pathologies afin que<br />
                     nous puissions paramétrer l'application à vos<br />
                     besoins en accessibilité
                 </p>
-                <div className="grid grid-cols-2 gap-4">
-                    {/* Dyslexie */}
-                    <div className="flex flex-col items-center justify-center p-7 bg-[#E5EBFF] rounded-2xl cursor-pointer" onClick={handleDyslexie}>
-                        <img src="/src/assets/images/icons/personalize/dyslexie.svg" alt="Dyslexie" className="w-10 h-10 mb-2" />
-                        <span className="text-[#1B1725] font-sofia text-sm">Dyslexie</span>
-                    </div>
 
-                    {/* Daltonisme */}
-                    <div className="flex flex-col items-center justify-center p-7 bg-[#E5EBFF] rounded-2xl cursor-pointer" onClick={handleDaltonisme}>
-                        <img src="/src/assets/images/icons/personalize/daltonisme.svg" alt="Daltonisme" className="w-10 h-10 mb-2" />
-                        <span className="text-[#1B1725] font-sofia text-sm">Daltonisme</span>
-                    </div>
-
-                    {/* Vision réduite */}
-                    <div className="flex flex-col items-center justify-center p-7 bg-[#E5EBFF] rounded-2xl cursor-pointer" onClick={handleVisionReduite}>
-                        <img src="/src/assets/images/icons/personalize/vision-reduite.svg" alt="Vision réduite" className="w-10 h-10 mb-2" />
-                        <span className="text-[#1B1725] font-sofia text-sm">Vision réduite</span>
-                    </div>
-
-                    {/* Gestes imprécis */}
-                    <div className="flex flex-col items-center justify-center p-8 bg-[#E5EBFF] rounded-2xl cursor-pointer" onClick={handleGestesImprecis}>
-                        <img src="/src/assets/images/icons/personalize/gestes-imprecis.svg" alt="Gestes imprécis" className="w-10 h-10 mb-2" />
-                        <span className="text-[#1B1725] font-sofia text-sm">Gestes imprécis</span>
-                    </div>
+                <div className="grid grid-cols-2 gap-4 mb-10">
+                    {/* Carte réutilisable */}
+                    {[
+                        { id: 'dyslexie', label: 'Dyslexie', icon: 'dyslexie' },
+                        { id: 'daltonisme', label: 'Daltonisme', icon: 'daltonisme' },
+                        { id: 'vision', label: 'Vision réduite', icon: 'vision-reduite' },
+                        { id: 'gestes', label: 'Gestes imprécis', icon: 'gestes-imprecis' },
+                    ].map((item) => (
+                        <div
+                            key={item.id}
+                            onClick={() => toggleSelection(item.id)}
+                            className={`flex flex-col items-center justify-center p-6 rounded-2xl cursor-pointer transition-all bg-[#E5EBFF]
+                ${isSelected(item.id) ? 'border-2 border-[#787FDC]' : 'border-2 border-transparent'}
+                            hover:bg-[#D1D9FF]`}
+                        >
+                            <img
+                                src={`/src/assets/images/icons/personalize/${item.icon}.svg`}
+                                alt={item.label}
+                                className="w-10 h-10 mb-2"
+                            />
+                            <span className="font-sofia text-sm">{item.label}</span>
+                        </div>
+                    ))}
                 </div>
 
+                <button
+                    onClick={handleNext}
+                    className={`w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition hover:bg-[#E5EBFF]`}
+                >
+                    ÉTAPE SUIVANTE
+                </button>
             </div>
-
         </div>
     );
 }
