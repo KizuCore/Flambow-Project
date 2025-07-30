@@ -8,9 +8,9 @@ export default {
     extend: {
       fontFamily: {
         'sofia': ['Sofia Pro', 'sans-serif'],
-        'newake': ['"Newake"', 'sans-serif'],
-        'bricolage': ['"Bricolage Grotesque"', 'sans-serif'],
-        'sofia': ['"Sofia Pro"', 'sans-serif'],
+        'newake': ['Newake', 'sans-serif'],
+        'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+        'opendyslexic': ['OpenDyslexic', 'sans-serif'],
         'comfortaa': ['Comfortaa', 'sans-serif'],
       },
     },
