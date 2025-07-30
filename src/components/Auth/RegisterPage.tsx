@@ -1,9 +1,23 @@
+import { useNavigate } from 'react-router-dom';
 import circleTopRight from '../../assets/images/deco/circle/circle-top-right.svg';
+import ArrowLeft from '../../assets/images/icons/arrow/arrow-left.svg';
 
 
 export default function RegisterPage() {
+    const navigate = useNavigate();
+
+    const handleWelcome = () => {
+        navigate('/welcome');
+    };
     return (
         <div className="min-h-screen flex flex-col justify-between bg-white relative px-6 pt-20 pb-6">
+            <img
+                src={ArrowLeft}
+                onClick={handleWelcome}
+                alt=""
+                className="absolute top-5 left-6 w-10 cursor-pointer"
+            />
+
             {/* Cercle haut */}
             <img src={circleTopRight} alt="" className="absolute top-0 right-0 w-32 md:w-40 lg:w-[24rem]" />
 
