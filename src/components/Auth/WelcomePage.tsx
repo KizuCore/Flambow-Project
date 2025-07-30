@@ -1,7 +1,17 @@
+import { useNavigate } from 'react-router-dom';
 import circleTopMid from '../../assets/images/deco/circle/circle-top-mid.svg';
 
 
 export default function WelcomePage() {
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        navigate('/home');
+    };
+
+    const handleRegister = () => {
+        navigate('/register');
+    };
     return (
         <div className="min-h-screen flex flex-col justify-between bg-white relative px-6 pt-20 pb-6">
             {/* Cercle haut */}
@@ -28,14 +38,14 @@ export default function WelcomePage() {
                             <input
                                 type="email"
                                 id="email"
-                                defaultValue=""
-                                placeholder="Email"
-                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px]  border-[#787FDC] placeholder:text-[#787FDC] bg-[#E5EBFF] text-[#787FDC] text-sm outline-none transition-opacity duration-300"
+                                placeholder="Email" // ← placeholder VISIBLE au repos
+                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-2 border-[#787FDC] placeholder-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm outline-none"
                             />
                             <label htmlFor="email" className="input-label-flambow font-comfortaa">
                                 Email
                             </label>
                         </div>
+
                     </div>
 
                     {/* Mot de passe */}
@@ -45,8 +55,7 @@ export default function WelcomePage() {
                                 type="password"
                                 id="password"
                                 placeholder="Mot de passe"
-                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px]  border-[#787FDC] placeholder:text-[#787FDC] bg-[#E5EBFF] text-[#787FDC] text-sm outline-none transition-opacity duration-300
-"
+                                className="peer w-full px-4 pt-3 pb-4 rounded-3xl border-[2px]  border-[#787FDC] placeholder:text-[#787FDC] bg-[#E5EBFF] text-[#1B1725] text-sm outline-none transition-opacity duration-300"
                             />
                             <label htmlFor="password" className="input-label-flambow font-comfortaa">
                                 Mot de passe
@@ -63,13 +72,14 @@ export default function WelcomePage() {
             {/* Boutons en bas */}
             <div className="relative z-10 w-full max-w-md mx-auto flex flex-col gap-4 pb-[5rem]">
                 <button
-                    type="submit"
+                    type="button"
+                    onClick={handleLogin}
                     className="w-full bg-[#787FDC] text-white border font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
                 >
                     SE CONNECTER
                 </button>
 
-                <button type="button" className="w-full border border-[#787FDC] text-[#787FDC] font-newake text-sm tracking-widest uppercase py-3 rounded-3xl bg-white hover:bg-[#E5EBFF] transition">
+                <button type="button" onClick={handleRegister} className="w-full border border-[#787FDC] text-[#787FDC] font-newake text-sm tracking-widest uppercase py-3 rounded-3xl bg-white hover:bg-[#E5EBFF] transition">
                     CREER UN COMPTE
                 </button>
 
