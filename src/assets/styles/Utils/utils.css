@@ -1,5 +1,5 @@
 .input-label-flambow {
-  @apply absolute left-5 -top-[1rem] px-2 text-sm text-[#787FDC] font-sofia z-10 transition-all;
+  @apply absolute left-7 -top-[1rem] px-2 text-sm text-[#787FDC] font-sofia z-10 transition-all opacity-0 peer-focus:opacity-100 peer-placeholder-shown:opacity-0;
 
   background: linear-gradient(to bottom, #ffffff 88%, #E5EBFF 12%);
 }
