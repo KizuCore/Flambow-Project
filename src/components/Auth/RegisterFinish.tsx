@@ -34,7 +34,7 @@ export default function PersonalizationDyslexie() {
                 <button
                     type="button"
                     onClick={handleLogin}
-                    className="w-full bg-[#787FDC] text-white border font-newaket text-[16px] font-bold tracking-widest uppercase py-5 rounded-3xl mt-12 hover:bg-[#E5EBFF] transition"
+                    className="w-full bg-[#787FDC] text-white border font-newaket text-[16px] font-bold tracking-widest uppercase py-4 rounded-3xl mt-12 hover:bg-[#E5EBFF] transition"
                 >
                     SE CONNECTER
                 </button>
