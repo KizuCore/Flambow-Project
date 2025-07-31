@@ -7,13 +7,14 @@ import './assets/styles/Utils/utils.css';
 import ScrollToTop from "./components/Utils/ScrollToTop.tsx";
 import WelcomePage from "./components/Auth/WelcomePage.tsx";
 import RegisterPage from "./components/Auth/RegisterPage.tsx";
-import ConfirmMail from "./components/Auth/ConfirmMail.tsx";
-import PersonalizationPage from "./components/Auth/PersonalizeExperience.tsx";
-import PersonalizationDyslexie from "./components/Auth/Personalize/Personalize-Dyslexie.tsx";
-import PersonalizationDaltonisme from "./components/Auth/Personalize/Personalize-Daltonisme.tsx";
-import PersonalizationVisionReduite from "./components/Auth/Personalize/Personalize-Vision-Reduite.tsx";
-import PersonalizationGestesImprecis from "./components/Auth/Personalize/Personalize-Geste-Imprecis.tsx";
-import RegisterFinish from "./components/Auth/RegisterFinish.tsx";
+import ConfirmMail from "./components/Auth/Register/ConfirmMail.tsx";
+import PersonalizationPage from "./components/Auth/Register/PersonalizeExperience.tsx";
+import PersonalizationDyslexie from "./components/Auth/Register/Personalize/Personalize-Dyslexie.tsx";
+import PersonalizationDaltonisme from "./components/Auth/Register/Personalize/Personalize-Daltonisme.tsx";
+import PersonalizationVisionReduite from "./components/Auth/Register/Personalize/Personalize-Vision-Reduite.tsx";
+import PersonalizationGestesImprecis from "./components/Auth/Register/Personalize/Personalize-Geste-Imprecis.tsx";
+import RegisterFinish from "./components/Auth/Register/RegisterFinish.tsx";
+import ResearchActivitiesPage from "./components/Auth/Register/ResearchActivities.tsx";
 
 
 // Lazy load des composants de page
@@ -40,6 +41,7 @@ function App() {
               <Route path="/personalize-daltonisme" element={<PersonalizationDaltonisme />} />
               <Route path="/personalize-gestes-imprecis" element={<PersonalizationGestesImprecis />} />
               <Route path="/personalize-vision-reduite" element={<PersonalizationVisionReduite />} />
+              <Route path="/register-activities" element={<ResearchActivitiesPage />} />
               <Route path="/register-finish" element={<RegisterFinish />} />
             </Routes>
           </Suspense>

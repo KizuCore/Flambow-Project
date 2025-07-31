@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import circleTopRight from '../../../assets/images/deco/circle/circle-top-right.svg';
-import ArrowLeft from '../../../assets/images/icons/arrow/arrow-left.svg';
+import circleTopRight from '../../../../assets/images/deco/circle/circle-top-right.svg';
+import ArrowLeft from '../../../../assets/images/icons/arrow/arrow-left.svg';
 
-export default function PersonalizationVisionReduite() {
+export default function PersonalizationGestesImprecis() {
     const navigate = useNavigate();
 
     // Liste pathologies et routes associées
@@ -20,7 +20,7 @@ export default function PersonalizationVisionReduite() {
         if (!stored) return navigate('/register-finish'); // Aucune sélection : renvoie page register-finish
 
         const selections: string[] = JSON.parse(stored);
-        const currentId = 'vision'; // ID étape actuelle
+        const currentId = 'gestes'; // ID étape actuelle
 
         // Index étape actuelle dans l'ordre défini
         const currentIndex = pathologyOrder.findIndex((step) => step.id === currentId);
@@ -59,12 +59,10 @@ export default function PersonalizationVisionReduite() {
             {/* Contenu scrollable */}
             <div className="relative z-10 w-full max-w-md mx-auto flex flex-col items-center text-center">
                 <h1 className="text-[40px] leading-[100%] font-bold text-[#1B1725] font-bricolage mb-[2rem]">
-                    Paramétrage<br />pour la<br />vision réduite
+                    Paramétrage<br />pour les<br />gestes imprécis
                 </h1>
                 <p className="font-sofia text-[#787FDC] text-[16px] leading-[18px] text-center font-normal mb-5 pb-[3rem]">
-                    Nous vous proposons de changer la taille des<br />
-                    polices afin de faciliter votre lecture. Choisissez<br />
-                    la taille de police préférée ci-dessous :
+                    Afin de faciliter vos interactions avec<br />l’application, nous vous proposons d’augmenter<br />l’espacement et la taille des boutons de notre<br />application ( Pour laisser les paramètres par<br />défaut, passez à l’étape suivante) :
                 </p>
 
                 <button

@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import circleTopRight from '../../assets/images/deco/circle/circle-top-right.svg';
-import lineBotLeft from '../../assets/images/deco/line/line-bot-left.svg';
-import lineTopLeft2 from '../../assets/images/deco/line/line-top-left-2.svg';
-import fullLogo from '../../assets/images/logo/full-logo.svg';
+import circleTopRight from '../../../assets/images/deco/circle/circle-top-right.svg';
+import lineBotLeft from '../../../assets/images/deco/line/line-bot-left.svg';
+import lineTopLeft2 from '../../../assets/images/deco/line/line-top-left-2.svg';
+import fullLogo from '../../../assets/images/logo/full-logo.svg';
 
 export default function PersonalizationDyslexie() {
     const navigate = useNavigate();

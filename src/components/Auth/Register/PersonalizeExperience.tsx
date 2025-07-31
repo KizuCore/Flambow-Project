@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import circleTopRight from '../../assets/images/deco/circle/circle-top-right.svg';
+import circleTopRight from '../../../assets/images/deco/circle/circle-top-right.svg';
 
 export default function PersonalizationPage() {
     const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import circleTopRight from '../../../assets/images/deco/circle/circle-top-right.svg';
-import ArrowLeft from '../../../assets/images/icons/arrow/arrow-left.svg';
+import circleTopRight from '../../../../assets/images/deco/circle/circle-top-right.svg';
+import ArrowLeft from '../../../../assets/images/icons/arrow/arrow-left.svg';
 
 export default function PersonalizationDyslexie() {
     const navigate = useNavigate();
