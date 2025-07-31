@@ -36,7 +36,7 @@ function App() {
               { /* Authentification */}
               <Route path="/welcome" element={<WelcomePage />} />
               <Route path="/register" element={<RegisterPage />} />
-              { /* Registers System */}
+              { /* Système d'inscription */}
               <Route path="/confirm-mail" element={<ConfirmMail />} />
               <Route path="/personalize" element={<PersonalizationPage />} />
               <Route path="/personalize-dyslexie" element={<PersonalizationDyslexie />} />
