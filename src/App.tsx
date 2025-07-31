@@ -45,7 +45,6 @@ function App() {
               <Route path="/personalize-vision-reduite" element={<PersonalizationVisionReduite />} />
               <Route path="/register-activities" element={<ResearchActivitiesPage />} />
               <Route path="/choose-area" element={<RegisterGeoPage />} />
-              { /* test */}
               <Route path="/register-finish" element={<RegisterFinish />} />
             </Routes>
           </Suspense>
