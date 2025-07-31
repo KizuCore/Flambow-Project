@@ -65,12 +65,14 @@ export default function PersonalizationGestesImprecis() {
                     Afin de faciliter vos interactions avec<br />l’application, nous vous proposons d’augmenter<br />l’espacement et la taille des boutons de notre<br />application ( Pour laisser les paramètres par<br />défaut, passez à l’étape suivante) :
                 </p>
 
-                <button
-                    onClick={handleNext}
-                    className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
-                >
-                    ÉTAPE SUIVANTE
-                </button>
+                <div className="w-full px-6">
+                    <button
+                        onClick={handleNext}
+                        className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
+                    >
+                        ÉTAPE SUIVANTE
+                    </button>
+                </div>
             </div>
         </div>
     );

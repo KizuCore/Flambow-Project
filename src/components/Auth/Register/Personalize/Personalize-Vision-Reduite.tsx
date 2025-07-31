@@ -67,12 +67,14 @@ export default function PersonalizationVisionReduite() {
                     la taille de police préférée ci-dessous :
                 </p>
 
-                <button
-                    onClick={handleNext}
-                    className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
-                >
-                    ÉTAPE SUIVANTE
-                </button>
+                <div className="w-full px-6">
+                    <button
+                        onClick={handleNext}
+                        className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
+                    >
+                        ÉTAPE SUIVANTE
+                    </button>
+                </div>
             </div>
         </div>
     );

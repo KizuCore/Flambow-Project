@@ -8,7 +8,11 @@ export default function ResearchActivitiesPage() {
     const [selections, setSelections] = useState<string[]>([]);
 
     const handleBack = () => {
-        navigate('/personalize-experience');
+        navigate('/choose-area');
+    };
+
+    const handleNext = () => {
+        navigate('/register-profile');
     };
 
 
@@ -79,10 +83,16 @@ export default function ResearchActivitiesPage() {
 
                 <div className="fixed bottom-0 left-0 w-full px-6 pb-6 bg-white z-20 md:static md:px-0 md:pb-0 pt-4">
                     <button
-                        className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition hover:bg-[#E5EBFF]"
+                        onClick={handleNext}
+                        disabled={selections.length === 0}
+                        className={`w-full text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition
+    ${selections.length === 0
+                                ? 'bg-gray-300 cursor-not-allowed'
+                                : 'bg-[#787FDC] hover:bg-[#E5EBFF]'}`}
                     >
                         ÉTAPE SUIVANTE
                     </button>
+
                 </div>
             </div>
         </div>

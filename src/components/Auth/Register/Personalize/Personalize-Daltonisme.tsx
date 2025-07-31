@@ -66,14 +66,15 @@ export default function PersonalizationDaltonisme() {
                     préférée ci-dessous :
                 </p>
 
-                {/* Ici tu ajoutes ton contenu interactif si besoin */}
 
-                <button
-                    onClick={handleNext}
-                    className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
-                >
-                    ÉTAPE SUIVANTE
-                </button>
+                <div className="w-full px-6">
+                    <button
+                        onClick={handleNext}
+                        className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
+                    >
+                        ÉTAPE SUIVANTE
+                    </button>
+                </div>
             </div>
         </div>
     );

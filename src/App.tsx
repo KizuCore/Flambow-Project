@@ -15,6 +15,7 @@ import PersonalizationVisionReduite from "./components/Auth/Register/Personalize
 import PersonalizationGestesImprecis from "./components/Auth/Register/Personalize/Personalize-Geste-Imprecis.tsx";
 import RegisterFinish from "./components/Auth/Register/RegisterFinish.tsx";
 import ResearchActivitiesPage from "./components/Auth/Register/ResearchActivities.tsx";
+import RegisterGeoPage from "./components/Auth/Register/RegisterGeo.tsx";
 
 
 // Lazy load des composants de page
@@ -42,6 +43,9 @@ function App() {
               <Route path="/personalize-gestes-imprecis" element={<PersonalizationGestesImprecis />} />
               <Route path="/personalize-vision-reduite" element={<PersonalizationVisionReduite />} />
               <Route path="/register-activities" element={<ResearchActivitiesPage />} />
+              <Route path="/choose-area" element={<RegisterGeoPage />} />
+              {/*<Route path="/register-profile" element={<RegisterGeoPage />} />*/}
+
               <Route path="/register-finish" element={<RegisterFinish />} />
             </Routes>
           </Suspense>

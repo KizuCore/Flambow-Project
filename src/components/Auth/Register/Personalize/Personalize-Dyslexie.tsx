@@ -71,7 +71,7 @@ export default function PersonalizationDyslexie() {
                 </p>
 
                 {/* Choix de police */}
-                <div className="flex flex-col gap-4 w-full">
+                <div className="flex flex-col gap-4 w-full px-6">
                     <div
                         onClick={() => setSelectedFont('comfortaa')}
                         className={`cursor-pointer px-4 py-4 rounded-2xl bg-[#F3F5FF] text-center transition border-2 ${selectedFont === 'comfortaa' ? 'border-[#787FDC]' : 'border-transparent'}`}
@@ -92,15 +92,16 @@ export default function PersonalizationDyslexie() {
                         </p>
                     </div>
                 </div>
-
-                <button
-                    type="button"
-                    onClick={handleNext}
-                    disabled={!selectedFont}
-                    className={`w-full mt-10 bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition ${!selectedFont ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#E5EBFF]'}`}
-                >
-                    ÉTAPE SUIVANTE
-                </button>
+                <div className="w-full px-6">
+                    <button
+                        type="button"
+                        onClick={handleNext}
+                        disabled={!selectedFont}
+                        className={`w-full mt-10 bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition ${!selectedFont ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#E5EBFF]'}`}
+                    >
+                        ÉTAPE SUIVANTE
+                    </button>
+                </div>
             </div>
         </div>
     );

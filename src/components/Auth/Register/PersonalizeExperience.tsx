@@ -29,7 +29,7 @@ export default function PersonalizationPage() {
                 return;
             }
         }
-        navigate('/register-finish');
+        navigate('/choose-area');
     };
 
 
@@ -77,14 +77,15 @@ export default function PersonalizationPage() {
                         </div>
                     ))}
                 </div>
-
-                <button
-                    onClick={handleNext}
-                    className={`w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition hover:bg-[#E5EBFF]`}
-                >
-                    ÉTAPE SUIVANTE
-                </button>
+                <div className="w-full px-6">
+                    <button
+                        onClick={handleNext}
+                        className={`w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition hover:bg-[#E5EBFF]`}
+                    >
+                        ÉTAPE SUIVANTE
+                    </button>
+                </div>
             </div>
-        </div>
+        </div >
     );
 }
