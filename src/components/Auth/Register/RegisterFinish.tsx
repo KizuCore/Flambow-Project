@@ -9,7 +9,7 @@ export default function PersonalizationDyslexie() {
     const navigate = useNavigate();
 
     const handleLogin = () => {
-        navigate('/personalize-experience');
+        navigate('/personalize');
     };
 
     return (
