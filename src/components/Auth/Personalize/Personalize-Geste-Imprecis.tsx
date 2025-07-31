@@ -2,18 +2,53 @@ import { useNavigate } from 'react-router-dom';
 import circleTopRight from '../../../assets/images/deco/circle/circle-top-right.svg';
 import ArrowLeft from '../../../assets/images/icons/arrow/arrow-left.svg';
 
-
 export default function PersonalizationGestesImprecis() {
     const navigate = useNavigate();
 
-    const handlePersonalize = () => {
+    // Liste pathologies et routes associées
+    const pathologyOrder = [
+        { id: 'dyslexie', path: '/personalize-dyslexie' },
+        { id: 'daltonisme', path: '/personalize-daltonisme' },
+        { id: 'vision', path: '/personalize-vision-reduite' },
+        { id: 'gestes', path: '/personalize-gestes-imprecis' },
+    ];
+
+    // Logique pour passer à l'étape suivante selon l'ordre défini
+    const handleNext = () => {
+        // Récupération des pathologies sélectionnées par l'utilisateur
+        const stored = localStorage.getItem('accessibilitySelections');
+        if (!stored) return navigate('/register-finish'); // Aucune sélection : renvoie page register-finish
+
+        const selections: string[] = JSON.parse(stored);
+        const currentId = 'gestes'; // ID étape actuelle
+
+        // Index étape actuelle dans l'ordre défini
+        const currentIndex = pathologyOrder.findIndex((step) => step.id === currentId);
+
+        // Liste des prochaines étapes potentielles
+        const nextSteps = pathologyOrder.slice(currentIndex + 1);
+
+        // Recherche de la prochaine pathologie sélectionnée
+        const next = nextSteps.find((step) => selections.includes(step.id));
+
+        // Redirection vers l'étape suivante ou vers la fin de personnalisation
+        if (next) {
+            navigate(next.path);
+        } else {
+            navigate('/register-finish');
+        }
+    };
+
+    // Redirection vers la page de sélection initiale
+    const handleBack = () => {
         navigate('/personalize-experience');
     };
+
     return (
         <div className="min-h-screen flex flex-col justify-between bg-white relative px-6 pt-20 pb-6">
             <img
                 src={ArrowLeft}
-                onClick={handlePersonalize}
+                onClick={handleBack}
                 alt=""
                 className="absolute top-5 left-6 w-10 cursor-pointer"
             />
@@ -29,6 +64,13 @@ export default function PersonalizationGestesImprecis() {
                 <p className="font-sofia text-[#787FDC] text-[16px] leading-[18px] text-center font-normal mb-5 pb-[3rem]">
                     Afin de faciliter vos interactions avec<br />l’application, nous vous proposons d’augmenter<br />l’espacement et la taille des boutons de notre<br />application ( Pour laisser les paramètres par<br />défaut, passez à l’étape suivante) :
                 </p>
+
+                <button
+                    onClick={handleNext}
+                    className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
+                >
+                    ÉTAPE SUIVANTE
+                </button>
             </div>
         </div>
     );

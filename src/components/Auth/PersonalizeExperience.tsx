@@ -4,9 +4,14 @@ import circleTopRight from '../../assets/images/deco/circle/circle-top-right.svg
 
 export default function PersonalizationPage() {
     const navigate = useNavigate();
-
-    // État des pathologies sélectionnées
     const [selections, setSelections] = useState<string[]>([]);
+
+    const pathologyOrder = [
+        { id: 'dyslexie', path: '/personalize-dyslexie' },
+        { id: 'daltonisme', path: '/personalize-daltonisme' },
+        { id: 'vision', path: '/personalize-vision-reduite' },
+        { id: 'gestes', path: '/personalize-gestes-imprecis' },
+    ];
 
     const toggleSelection = (value: string) => {
         setSelections((prev) =>
@@ -16,9 +21,21 @@ export default function PersonalizationPage() {
 
     const isSelected = (value: string) => selections.includes(value);
 
+    const goToNextStep = (selections: string[]) => {
+        // Filtre dans l’ordre les pathologies sélectionnées
+        for (const step of pathologyOrder) {
+            if (selections.includes(step.id)) {
+                navigate(step.path);
+                return;
+            }
+        }
+        navigate('/register-finish');
+    };
+
+
     const handleNext = () => {
-        console.log('Pathologies sélectionnées :', selections);
-        navigate('/personalize-dyslexie');
+        localStorage.setItem('accessibilitySelections', JSON.stringify(selections));
+        goToNextStep(selections);
     };
 
     return (
@@ -38,7 +55,6 @@ export default function PersonalizationPage() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4 mb-10">
-                    {/* Carte réutilisable */}
                     {[
                         { id: 'dyslexie', label: 'Dyslexie', icon: 'dyslexie' },
                         { id: 'daltonisme', label: 'Daltonisme', icon: 'daltonisme' },
@@ -50,7 +66,7 @@ export default function PersonalizationPage() {
                             onClick={() => toggleSelection(item.id)}
                             className={`flex flex-col items-center justify-center p-6 rounded-2xl cursor-pointer transition-all bg-[#E5EBFF]
                 ${isSelected(item.id) ? 'border-2 border-[#787FDC]' : 'border-2 border-transparent'}
-                            hover:bg-[#D1D9FF]`}
+                hover:bg-[#D1D9FF]`}
                         >
                             <img
                                 src={`/src/assets/images/icons/personalize/${item.icon}.svg`}

@@ -6,16 +6,44 @@ import ArrowLeft from '../../../assets/images/icons/arrow/arrow-left.svg';
 export default function PersonalizationDyslexie() {
     const navigate = useNavigate();
     const [selectedFont, setSelectedFont] = useState<'comfortaa' | 'opendyslexic' | null>(null);
+    const pathologyOrder = [
+        { id: 'dyslexie', path: '/personalize-dyslexie' },
+        { id: 'daltonisme', path: '/personalize-daltonisme' },
+        { id: 'vision', path: '/personalize-vision-reduite' },
+        { id: 'gestes', path: '/personalize-gestes-imprecis' },
+    ];
 
-    const handleBack = () => {
-        navigate('/personalize-experience');
+    // Logique pour passer à l'étape suivante selon l'ordre défini
+    const handleNext = () => {
+        // Si aucune police n’est sélectionnée, on ne fait rien
+        if (!selectedFont) return;
+        // Récupération des pathologies sélectionnées par l'utilisateur
+        const stored = localStorage.getItem('accessibilitySelections');
+        if (!stored) return navigate('/register-finish'); // Aucune sélection : renvoie page register-finish
+
+        const selections: string[] = JSON.parse(stored);
+        const currentId = 'dyslexie'; // ID étape actuelle
+
+        // Index étape actuelle dans l'ordre défini
+        const currentIndex = pathologyOrder.findIndex((step) => step.id === currentId);
+
+        // Liste des prochaines étapes potentielles
+        const nextSteps = pathologyOrder.slice(currentIndex + 1);
+
+        // Recherche de la prochaine pathologie sélectionnée
+        const next = nextSteps.find((step) => selections.includes(step.id));
+
+        // Redirection vers l'étape suivante ou vers la fin de personnalisation
+        if (next) {
+            navigate(next.path);
+        } else {
+            navigate('/register-finish');
+        }
     };
 
-    const handleNext = () => {
-        if (selectedFont) {
-            // Tu peux stocker la sélection ici dans un state global / contexte si nécessaire
-            navigate('/next-step'); // À adapter
-        }
+    // Redirection vers la page de sélection initiale
+    const handleBack = () => {
+        navigate('/personalize-experience');
     };
 
     return (
@@ -44,11 +72,9 @@ export default function PersonalizationDyslexie() {
 
                 {/* Choix de police */}
                 <div className="flex flex-col gap-4 w-full">
-                    {/* Comfortaa */}
                     <div
                         onClick={() => setSelectedFont('comfortaa')}
-                        className={`cursor-pointer px-4 py-4 rounded-2xl bg-[#F3F5FF] text-center transition border-2 ${selectedFont === 'comfortaa' ? 'border-[#787FDC]' : 'border-transparent'
-                            }`}
+                        className={`cursor-pointer px-4 py-4 rounded-2xl bg-[#F3F5FF] text-center transition border-2 ${selectedFont === 'comfortaa' ? 'border-[#787FDC]' : 'border-transparent'}`}
                     >
                         <h3 className="font-comfortaa text-[#1B1725] mb-2">Comfortaa</h3>
                         <p className="font-comfortaa text-sm text-[#1B1725]">
@@ -56,11 +82,9 @@ export default function PersonalizationDyslexie() {
                         </p>
                     </div>
 
-                    {/* OpenDyslexic */}
                     <div
                         onClick={() => setSelectedFont('opendyslexic')}
-                        className={`cursor-pointer px-4 py-4 rounded-2xl bg-[#F3F5FF] text-center transition border-2 ${selectedFont === 'opendyslexic' ? 'border-[#787FDC]' : 'border-transparent'
-                            }`}
+                        className={`cursor-pointer px-4 py-4 rounded-2xl bg-[#F3F5FF] text-center transition border-2 ${selectedFont === 'opendyslexic' ? 'border-[#787FDC]' : 'border-transparent'}`}
                     >
                         <h3 className="text-base text-[#1B1725] font-opendyslexic mb-2">Open dyslexic</h3>
                         <p className="font-opendyslexic text-sm text-[#1B1725]">
@@ -69,13 +93,11 @@ export default function PersonalizationDyslexie() {
                     </div>
                 </div>
 
-                {/* Étape suivante */}
                 <button
                     type="button"
                     onClick={handleNext}
                     disabled={!selectedFont}
-                    className={`w-full mt-10 bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition ${!selectedFont ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#E5EBFF]'
-                        }`}
+                    className={`w-full mt-10 bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition ${!selectedFont ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#E5EBFF]'}`}
                 >
                     ÉTAPE SUIVANTE
                 </button>
