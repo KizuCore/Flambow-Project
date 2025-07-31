@@ -33,9 +33,10 @@ function App() {
           <Suspense>
             <Routes>
               <Route path="/" element={<LandingPage />} />
-              <Route path="/welcome" element={<WelcomePage />} />
               { /* Authentification */}
+              <Route path="/welcome" element={<WelcomePage />} />
               <Route path="/register" element={<RegisterPage />} />
+              { /* Registers System */}
               <Route path="/confirm-mail" element={<ConfirmMail />} />
               <Route path="/personalize" element={<PersonalizationPage />} />
               <Route path="/personalize-dyslexie" element={<PersonalizationDyslexie />} />
@@ -44,7 +45,6 @@ function App() {
               <Route path="/personalize-vision-reduite" element={<PersonalizationVisionReduite />} />
               <Route path="/register-activities" element={<ResearchActivitiesPage />} />
               <Route path="/choose-area" element={<RegisterGeoPage />} />
-              {/*<Route path="/register-profile" element={<RegisterGeoPage />} />*/}
 
               <Route path="/register-finish" element={<RegisterFinish />} />
             </Routes>
