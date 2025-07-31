@@ -124,13 +124,22 @@
 }
 
 /* Bricolage Grotesque */
+/* Regular */
 @font-face {
   font-family: 'Bricolage Grotesque';
-  src: url('/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont.ttf') format('truetype');
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
+  src: url('/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Regular.ttf') format('truetype');
+  font-weight: 400;
   font-style: normal;
 }
+
+/* Bold */
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('/fonts/Bricolage_Grotesque/static/BricolageGrotesque-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 /****************/
 /* OpenDyslexic */
