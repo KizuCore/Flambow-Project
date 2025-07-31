@@ -1,9 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import circleTopRight from '../../../../assets/images/deco/circle/circle-top-right.svg';
 import ArrowLeft from '../../../../assets/images/icons/arrow/arrow-left.svg';
+import { useState } from 'react';
 
 export default function PersonalizationDaltonisme() {
     const navigate = useNavigate();
+    const [selection, setSelection] = useState<string | null>(null);
+
+
 
     // Liste pathologies et routes associées
     const pathologyOrder = [
@@ -44,6 +48,13 @@ export default function PersonalizationDaltonisme() {
         navigate('/personalize');
     };
 
+    const isSelected = (value: string) => selection === value;
+
+
+    const handleSelection = (value: string) => {
+        setSelection(value);
+    };
+
     return (
         <div className="min-h-screen flex flex-col justify-between bg-white relative px-6 pt-20 pb-6">
             <img
@@ -65,12 +76,37 @@ export default function PersonalizationDaltonisme() {
                     expérience sur notre site. Choisissez la palette<br />
                     préférée ci-dessous :
                 </p>
+                <div className="grid grid-cols-2 gap-4 mb-10">
+                    {[
+                        { id: 'bricolage', label: 'Palette par défaut', icon: 'palette-defaut' },
+                        { id: 'cuisine', label: 'Palette noire constrastée', icon: 'palette-noire' },
+                    ].map((item) => (
+                        <div
+                            key={item.id}
+                            onClick={() => handleSelection(item.id)}
+                            className={`flex flex-col items-center justify-center p-6 rounded-2xl cursor-pointer transition-all bg-[#E5EBFF]
+                ${isSelected(item.id) ? 'border-2 border-[#787FDC]' : 'border-2 border-transparent'}
+                hover:bg-[#D1D9FF]`}
+                        >
+                            <img
+                                src={`/src/assets/images/icons/palette/${item.icon}.svg`}
+                                alt={item.label}
+                                className="w-10 h-10 mb-2"
+                            />
+                            <span className="font-sofia text-sm">{item.label}</span>
+                        </div>
+                    ))}
+                </div>
 
 
                 <div className="w-full px-6">
                     <button
                         onClick={handleNext}
-                        className="w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl hover:bg-[#E5EBFF] transition"
+                        disabled={!selection}
+                        className={`w-full text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition
+    ${!selection
+                                ? 'bg-gray-300 cursor-not-allowed'
+                                : 'bg-[#787FDC] hover:bg-[#E5EBFF]'}`}
                     >
                         ÉTAPE SUIVANTE
                     </button>
