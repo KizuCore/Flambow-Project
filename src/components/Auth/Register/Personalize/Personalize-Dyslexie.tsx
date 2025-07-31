@@ -37,7 +37,7 @@ export default function PersonalizationDyslexie() {
         if (next) {
             navigate(next.path);
         } else {
-            navigate('/register-finish');
+            navigate('/choose-area');
         }
     };
 

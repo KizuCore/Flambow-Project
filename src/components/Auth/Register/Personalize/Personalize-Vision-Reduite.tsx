@@ -35,7 +35,7 @@ export default function PersonalizationVisionReduite() {
         if (next) {
             navigate(next.path);
         } else {
-            navigate('/register-finish');
+            navigate('/choose-area');
         }
     };
 

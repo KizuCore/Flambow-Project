@@ -35,7 +35,7 @@ export default function PersonalizationDaltonisme() {
         if (next) {
             navigate(next.path);
         } else {
-            navigate('/register-finish');
+            navigate('/choose-area');
         }
     };
 
