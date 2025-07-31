@@ -7,7 +7,6 @@ import circleTopRight from '../../../assets/images/deco/circle/circle-top-right.
 import ArrowLeft from '../../../assets/images/icons/arrow/arrow-left.svg';
 import DeleteIcon from '../../../assets/images/icons/selection/delete.svg';
 import AddIcon from '../../../assets/images/icons/selection/add.svg';
-import '../../../assets/styles/Auth/auth.css';
 
 // Liste fixe des villes proposées
 const availableCities = ['paris', 'lyon', 'marseille'];
@@ -152,17 +151,18 @@ export default function RegisterGeoPage() {
 
             {/* Décoration cercle en haut à droite */}
             <img src={circleTopRight} alt="" className="absolute top-0 right-0 w-32 md:w-40 lg:w-[24rem]" />
-
-            {/* Contenu principal */}
-            <div className="relative z-10 w-full max-w-md mx-auto flex flex-col items-center text-center px-6">
+            <div className="relative z-10 w-full max-w-md mx-auto flex flex-col text-center px-6">
                 <h1 className="text-[32px] leading-[110%] font-bold text-[#1B1725] font-bricolage mb-6">
                     Votre secteur<br />géographique
                 </h1>
-                <p className="font-sofia text-[#787FDC] text-[15px] leading-6 font-normal mb-10">
+                <p className="font-sofia text-[#787FDC] text-[15px] leading-6 font-normal mb-6">
                     Afin de vous recommander des annonces au<br />
                     plus proche de chez-vous, merci de nous<br />
                     indiquer où vous habitez :
                 </p>
+            </div>
+            {/* Contenu principal */}
+            <div className="relative z-10 w-full max-w-md mx-auto flex flex-col text-center px-6 h-[calc(100vh-6rem)] overflow-y-auto pb-28">
 
                 {/* Liste des champs de ville */}
                 <div className="w-full flex flex-col gap-4 mb-4">
@@ -182,18 +182,21 @@ export default function RegisterGeoPage() {
             </div>
 
             {/* Bouton étape suivante */}
-            <div className="fixed bottom-0 left-0 w-full px-6 pb-20 bg-white z-20 md:static md:px-0 md:pb-10 pt-4">
-                <button
-                    onClick={handleNext}
-                    disabled={cities.some((c) => !c)} // Désactivé si une ville est vide
-                    className={`w-full font-newake text-sm tracking-widest uppercase py-4 rounded-3xl transition ${cities.some((c) => !c)
-                        ? 'bg-[#C4C4C4] text-white cursor-not-allowed'
-                        : 'bg-[#787FDC] text-white hover:bg-[#E5EBFF]'
-                        }`}
-                >
-                    ÉTAPE SUIVANTE
-                </button>
+            <div className="fixed bottom-0 left-0 w-full px-6 pb-6  z-20 md:static md:px-0 md:pb-10 pt-4">
+                <div className="max-w-md mx-auto">
+                    <button
+                        onClick={handleNext}
+                        disabled={cities.some((c) => !c)}
+                        className={`w-full font-newake text-sm tracking-widest uppercase py-4 rounded-3xl transition ${cities.some((c) => !c)
+                            ? 'bg-[#C4C4C4] text-white cursor-not-allowed'
+                            : 'bg-[#787FDC] text-white hover:bg-[#E5EBFF]'
+                            }`}
+                    >
+                        ÉTAPE SUIVANTE
+                    </button>
+                </div>
             </div>
+
         </div>
     );
 }
