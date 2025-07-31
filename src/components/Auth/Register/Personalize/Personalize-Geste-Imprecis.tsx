@@ -41,7 +41,7 @@ export default function PersonalizationGestesImprecis() {
 
     // Redirection vers la page de sélection initiale
     const handleBack = () => {
-        navigate('/personalize-experience');
+        navigate('/personalize');
     };
 
     return (
