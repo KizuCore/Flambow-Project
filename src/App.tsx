@@ -44,8 +44,8 @@ function App() {
               <Route path="/personalize-daltonisme" element={<PersonalizationDaltonisme />} />
               <Route path="/personalize-gestes-imprecis" element={<PersonalizationGestesImprecis />} />
               <Route path="/personalize-vision-reduite" element={<PersonalizationVisionReduite />} />
-              <Route path="/register-activities" element={<ResearchActivitiesPage />} />
               <Route path="/choose-area" element={<RegisterGeoPage />} />
+              <Route path="/register-activities" element={<ResearchActivitiesPage />} />
               <Route path="/register-profile" element={<RegisterProfile />} />
               <Route path="/register-finish" element={<RegisterFinish />} />
             </Routes>
