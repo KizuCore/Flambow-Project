@@ -60,7 +60,7 @@ export default function PersonalizationPage() {
                 <h1 className="text-[32px] leading-[110%] font-bold text-[#1B1725] font-bricolage mb-6">
                     Personnalisons<br />votre expérience
                 </h1>
-                <p className="font-sofia text-[#787FDC] text-[15px] leading-6 font-normal mb-10">
+                <p className="font-sofia text-[#787FDC] text-[15px] leading-[1.2] font-normal mb-10">
                     Renseignez d'éventuelles pathologies afin que<br />
                     nous puissions paramétrer l'application à vos<br />
                     besoins en accessibilité
