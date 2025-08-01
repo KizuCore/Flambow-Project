@@ -92,7 +92,7 @@ export default function PersonalizationVisionReduite() {
                             onClick={() => setSelectedVizion(id)}
                             className={`${baseCardStyle} ${selectedVizion === id ? 'border-[#787FDC]' : 'border-transparent'}`}
                         >
-                            <p className={`font-sofia text-sm text-[#1B1725] ${textSize}`}>
+                            <p className={`font-sofia text-[#1B1725] ${textSize}`}>
                                 Aa<br /><br />
                                 Cette taille de police est utilisée<br />
                                 par défaut sur notre application
