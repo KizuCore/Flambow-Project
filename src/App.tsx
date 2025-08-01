@@ -8,7 +8,7 @@ import ScrollToTop from "./components/Utils/ScrollToTop.tsx";
 import WelcomePage from "./components/Auth/WelcomePage.tsx";
 import RegisterPage from "./components/Auth/RegisterPage.tsx";
 import ConfirmMail from "./components/Auth/Register/ConfirmMail.tsx";
-import PersonalizationPage from "./components/Auth/Register/PersonalizeExperience.tsx";
+import PersonalizationPage from "./components/Auth/Register/Personalize.tsx";
 import PersonalizationDyslexie from "./components/Auth/Register/Personalize/Personalize-Dyslexie.tsx";
 import PersonalizationDaltonisme from "./components/Auth/Register/Personalize/Personalize-Daltonisme.tsx";
 import PersonalizationVisionReduite from "./components/Auth/Register/Personalize/Personalize-Vision-Reduite.tsx";
@@ -16,6 +16,7 @@ import PersonalizationGestesImprecis from "./components/Auth/Register/Personaliz
 import RegisterFinish from "./components/Auth/Register/RegisterFinish.tsx";
 import ResearchActivitiesPage from "./components/Auth/Register/ResearchActivities.tsx";
 import RegisterGeoPage from "./components/Auth/Register/RegisterArea.tsx";
+import RegisterProfile from "./components/Auth/Register/RegisterProfile.tsx";
 
 
 // Lazy load des composants de page
@@ -45,6 +46,7 @@ function App() {
               <Route path="/personalize-vision-reduite" element={<PersonalizationVisionReduite />} />
               <Route path="/register-activities" element={<ResearchActivitiesPage />} />
               <Route path="/choose-area" element={<RegisterGeoPage />} />
+              <Route path="/register-profile" element={<RegisterProfile />} />
               <Route path="/register-finish" element={<RegisterFinish />} />
             </Routes>
           </Suspense>
