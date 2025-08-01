@@ -72,7 +72,7 @@ export default function ResearchActivitiesPage() {
                 hover:bg-[#D1D9FF]`}
                         >
                             <img
-                                src={`/src/assets/images/icons/activities/${item.icon}.svg`}
+                                src={`/images/icons/activities/${item.icon}.svg`}
                                 alt={item.label}
                                 className="w-10 h-10 mb-2"
                             />
