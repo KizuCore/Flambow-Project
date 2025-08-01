@@ -13,7 +13,7 @@ export default function RegisterProfilee() {
     const [introduction, setIntroduction] = useState('');
     const [preference, setPreference] = useState<'vouvoiement' | 'tutoiement' | null>(null);
 
-    const handleBack = () => navigate('/choose-area');
+    const handleBack = () => navigate('/register-activities');
     const handleNext = () => {
         // TODO : enregistrer les données ici
         navigate('/register-finish');
