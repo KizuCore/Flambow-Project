@@ -23,10 +23,12 @@ export default function RegisterGeoPage() {
         updated[index] = value;
         setCities(updated);
     };
+
     /* Fonction pour supprimer une ville */
     const removeCity = (index: number) => {
         setCities(prev => prev.filter((_, i) => i !== index));
     };
+
     /* * Fonction pour charger les options de ville */
     // Utilise l'API GeoGouv pour récupérer les villes basées sur l'entrée
     const loadCityOptions = async (inputValue: string, index: number) => {

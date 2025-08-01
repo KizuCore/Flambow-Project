@@ -68,7 +68,7 @@ export default function PersonalizationDaltonisme() {
                 </h1>
 
                 {/* Description */}
-                <p className="font-sofia text-[#787FDC] text-[16px] leading-[18px] text-center font-normal mb-5 pb-[3rem]">
+                <p className="font-sofia text-[#787FDC] text-[16px] leading-[1.2] text-center font-normal mb-5 pb-[3rem]">
                     Nous vous proposons de changer la palette de<br />
                     couleurs de l’application afin de fluidifier votre<br />
                     expérience sur notre site. Choisissez la palette<br />

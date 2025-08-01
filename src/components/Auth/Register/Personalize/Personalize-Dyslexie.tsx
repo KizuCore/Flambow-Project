@@ -64,7 +64,7 @@ export default function PersonalizationDyslexie() {
                 <h1 className="text-[32px] leading-[110%] font-bold text-[#1B1725] font-bricolage mb-6">
                     Paramétrage<br />pour la dyslexie
                 </h1>
-                <p className="font-sofia text-[#787FDC] text-[15px] leading-6 text-center font-normal mb-10">
+                <p className="font-sofia text-[#787FDC] text-[15px] leading-[1.2] text-center font-normal mb-10">
                     Nous vous proposons de changer la police<br />
                     d’écriture afin de fluidifier votre expérience sur<br />
                     notre site. Choisissez la police favorite ci-dessous :

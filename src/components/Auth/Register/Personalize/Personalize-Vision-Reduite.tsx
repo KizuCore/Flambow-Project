@@ -78,7 +78,7 @@ export default function PersonalizationVisionReduite() {
                 </h1>
 
                 {/* Description */}
-                <p className="font-sofia text-[#787FDC] text-[16px] leading-[18px] font-normal mb-5 pb-[1rem]">
+                <p className="font-sofia text-[#787FDC] text-[16px] leading-[1.2] font-normal mb-5 pb-[1rem]">
                     Nous vous proposons de changer la taille des<br />
                     polices afin de faciliter votre lecture. Choisissez<br />
                     la taille de police préférée ci-dessous :

@@ -77,7 +77,7 @@ export default function PersonalizationGestesImprecis() {
                 </h1>
 
                 {/* Description */}
-                <p className="font-sofia text-[#787FDC] text-[16px] leading-[18px] font-normal mb-5 pb-[1rem]">
+                <p className="font-sofia text-[#787FDC] text-[16px] leading-[1.2] font-normal mb-5 pb-[1rem]">
                     Afin de faciliter vos interactions avec<br />l’application, nous vous proposons d’augmenter<br />l’espacement et la taille des boutons de notre<br />application ( Pour laisser les paramètres par<br />défaut, passez à l’étape suivante) :
                 </p>
                 {/* Options cliquables */}

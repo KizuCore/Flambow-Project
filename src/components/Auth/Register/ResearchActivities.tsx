@@ -42,7 +42,7 @@ export default function ResearchActivitiesPage() {
                 <h1 className="text-[32px] leading-[110%] font-bold text-[#1B1725] font-bricolage mb-6">
                     Ce que vous<br />recherchez
                 </h1>
-                <p className="font-sofia text-[#787FDC] text-[15px] leading-6 font-normal mb-10">
+                <p className="font-sofia text-[#787FDC] text-[15px] leading-[1.2] font-normal mb-10">
                     Dîtes nous ce que vous souhaiteriez<br />
                     apprendre avec notre plateforme
                 </p>
