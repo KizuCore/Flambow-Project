@@ -1,6 +1,11 @@
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import circleTopRight from '../../../assets/images/deco/circle/circle-top-right.svg';
+import dyslexieIcon from '../../../assets/images/icons/personalize/dyslexie.svg';
+import daltonismeIcon from '../../../assets/images/icons/personalize/daltonisme.svg';
+import visionIcon from '../../../assets/images/icons/personalize/vision-reduite.svg';
+import gestesIcon from '../../../assets/images/icons/personalize/gestes-imprecis.svg';
+
 
 export default function PersonalizationPage() {
     const navigate = useNavigate();
@@ -12,6 +17,13 @@ export default function PersonalizationPage() {
         { id: 'vision', path: '/personalize-vision-reduite' },
         { id: 'gestes', path: '/personalize-gestes-imprecis' },
     ];
+    const icons: Record<string, string> = {
+        dyslexie: dyslexieIcon,
+        daltonisme: daltonismeIcon,
+        vision: visionIcon,
+        gestes: gestesIcon,
+    };
+
 
     const toggleSelection = (value: string) => {
         setSelections((prev) =>
@@ -69,10 +81,11 @@ export default function PersonalizationPage() {
                 hover:bg-[#D1D9FF]`}
                         >
                             <img
-                                src={`/src/assets/images/icons/personalize/${item.icon}.svg`}
+                                src={icons[item.id]}
                                 alt={item.label}
                                 className="w-10 h-10 mb-2"
                             />
+
                             <span className="font-sofia text-sm">{item.label}</span>
                         </div>
                     ))}
