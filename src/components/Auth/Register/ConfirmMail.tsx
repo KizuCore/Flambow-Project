@@ -9,6 +9,10 @@ export default function RegisterPage() {
     const handleWelcome = () => {
         navigate('/welcome');
     };
+
+    const TEMPORAIRE = () => {
+        navigate('/personalize');
+    };
     return (
         <div className="min-h-screen flex flex-col justify-between bg-white relative px-6 pt-20 pb-6">
             <img
@@ -30,6 +34,14 @@ export default function RegisterPage() {
                     Pour continuer votre inscription, rendez-vous<br />
                     dans votre boîte mail et cliquez sur confirmer
                 </p>
+            </div>
+            <div className="w-full px-6">
+                <button
+                    onClick={TEMPORAIRE}
+                    className={`w-full bg-[#787FDC] text-white font-newake text-sm tracking-widest uppercase py-3 rounded-3xl transition hover:bg-[#E5EBFF]`}
+                >
+                    bouton temporaire
+                </button>
             </div>
         </div>
     );
